@@ -1,0 +1,188 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* GLOBALES */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/Session.png);
+    background-repeat: no-repeat;
+    background-position: center 0% ;
+    background-size:  50vw 40vh;
+    background-color: whitesmoke;
+}
+
+h1 {
+    margin: 0;
+    color: #4b4b4b;
+    padding: 30px 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* INICIAR SESSION */
+
+div.header-barra {
+    background-color: rgba(255, 255, 255, 0.335);
+    text-align: center;
+    width: 360px;
+    height: 230px;
+    padding: 0 25px;
+    border-radius: 8px;
+}
+
+input {
+    display: block;
+}
+
+input.Name {
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    background-color: #ffffff;
+    border-radius: 12px;
+    color: rgb(54, 54, 54);
+    border: none;
+}
+
+input.Name {
+    width: 100%;
+    padding: 10px 10px;
+    outline: none;
+    background-color: #ffffff;
+    border-radius: 12px;
+    color: rgb(80, 77, 77);
+    border: none;
+}
+
+div.Boton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+input.Btn {
+    padding: 10px 20px;
+    outline: none;
+    background-color: #126fbb;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+input.Btn1 {
+    padding: 10px 20px;
+    outline: none;
+    background-color: #126fbb;
+    border-radius: 12px;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+input.Btn:hover {
+    background-color: rgb(6, 57, 98);
+}
+input.Btn1:hover {
+    background-color: rgb(6, 57, 98);
+}
+
+
+/* MENSAJE DE ERROR */
+
+div.CajaMSGLobo {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 400px;
+    height: 400px;
+    animation: MensajeAnit 1s ease 0s;
+    display: none;
+}
+
+div.CajaMSGLobo img {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    right: -100px;
+    bottom: -50px;
+}
+
+div.msg {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 55%, 86% 73%, 100% 89%, 66% 74%, 0% 75%);
+    width: 180px;
+    height: 130px;
+    background-color: rgba(255, 255, 255, 0.465);
+    position: relative;
+    top: 50px;
+    left: 80px;
+    padding: 5px 15px;
+}
+
+div.msg p {
+    color: #ffffff;
+    margin: 0;
+}
+
+div.msg p:first-of-type {
+    color: #ffffff;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 25px;
+}
+
+div.MSGErrorCellW {
+    display: none;
+}
+
+div.MSGErroCell {
+    background-color: rgba(246, 58, 58, 0.787);
+    padding: 10px 8px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+div.MSGErroCell p {
+    margin: 0;
+    color: #ffffff;
+}
+
+@media (max-width:1000px) {
+    div.CajaMSGcell {
+        display: none;
+    }
+    div.MSGErrorCellW {
+        display: block;
+    }
+}
+
+@keyframes MensajeAnit {
+    0% {
+        transform: translateX(500px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}

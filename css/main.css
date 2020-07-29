@@ -1,0 +1,385 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+/* VARIABLES */
+
+:root {
+    --ColorNaranja: #DE7539;
+}
+
+
+/* GLOBALES */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+}
+
+
+/* SECCION 1 HEADER */
+
+div.header-barra {
+    width: 50%;
+    height: 100vh;
+    background-image: url(../img/header.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+@media (max-width: 650px) {
+    div.header-barra {
+        display: block;
+        width: 100%;
+        height: 20vh;
+        position: relative;
+    }
+}
+
+div.HeaderInfoUsuario p {
+    text-align: center;
+    color: #3a2718;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 6px 0;
+    letter-spacing: 10px;
+}
+
+div.HeaderInfoUsuario p:first-of-type {
+    font-size: 45px;
+}
+
+
+/* SECCCION 2 HEADER */
+
+div.GestorNotas {
+    width: 50%;
+    height: 100vh;
+    padding: 15px 75px;
+}
+
+@media (max-width: 860px) {
+    div.GestorNotas {
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    div.GestorNotas {
+        width: 100%;
+        padding: 15px 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    div.GestorNotas {
+        width: 100%;
+        padding: 15px 15px;
+    }
+}
+
+div.GestorNotas h1 {
+    color: var(--ColorNaranja);
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+div.Opciones ul li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+div.Opciones ul li p:nth-child(2) {
+    margin-left: 15px;
+    color: rgb(51, 50, 50);
+}
+
+div.Opciones .Icono {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px #909090;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+div.Opciones .Icono p,
+div.Opciones .Icono i {
+    color: var(--ColorNaranja);
+    font-size: 45px;
+    font-weight: bold;
+}
+
+div.AgregaNota {
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px #909090;
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 8px;
+    margin-top: 40px;
+    animation: AgregarNot 1s ease 0s;
+    display: none;
+}
+
+div.AgregaNota h2 {
+    color: var(--ColorNaranja);
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+div.AgregaNota input.Inpt {
+    width: 100%;
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 1px solid rgb(134, 134, 134);
+    outline: none;
+    color: rgb(49, 48, 48);
+}
+
+div.BtnAgregar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+div.BtnAgregar input {
+    background-color: var(--ColorNaranja);
+    color: #ffffff;
+    padding: 5px 15px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 7px;
+    margin-top: 30px;
+    transition: all .5s ease;
+}
+
+div.BtnAgregar input:hover {
+    background-color: rgb(141, 94, 8);
+}
+
+div.NotaEnviada {
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 0;
+    background-color: rgb(86, 243, 107);
+    color: #ffffff;
+    text-align: center;
+    display: none;
+}
+
+div.NotaError {
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px 0;
+    background-color: rgb(243, 86, 86);
+    color: #ffffff;
+    text-align: center;
+    display: none;
+}
+
+div.FondoOso {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 80%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+div.FondoOso img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+@keyframes AgregarNot {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* SECCION 3 VER NOTAS */
+
+div.seccion1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+div.seccion2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    animation: Seccion2 .8s ease 0s;
+    display: none;
+}
+
+@media (max-width: 650px) {
+    div.seccion1 {
+        top: 150px;
+    }
+    div.seccion2 {
+        top: 150px;
+    }
+}
+
+div.FondoOso2 {
+    position: absolute;
+    z-index: -1;
+    bottom: 0;
+    width: 80%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+div.FondoOso2 img {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+@keyframes Seccion1 {
+    0% {
+        transform: translateX(-600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes Seccion2 {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+/* SECCION 2 VER NOTAS */
+
+div.InfoText {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 26px;
+}
+
+div.InfoText p {
+    color: #6b6868;
+}
+
+div.InfoText a {
+    background-color: var(--ColorNaranja);
+    padding: 5px 15px;
+    border-radius: 8px;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+div.InfoText a:hover {
+    background-color: rgb(177, 97, 6);
+}
+
+div.TodasNotas {
+    margin-top: 20px;
+    width: 100%;
+    height: 400px;
+    background-color: #ffffff86;
+    border: 1px solid #cacaca;
+    overflow-y: scroll;
+    padding: 15px 15px;
+}
+
+div.TodasNotas::-webkit-scrollbar {
+    width: 6px;
+}
+
+div.TodasNotas::-webkit-scrollbar-thumb {
+    background-color: var(--ColorNaranja);
+    border-radius: 8px;
+}
+
+div.TodasNotas li {
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px #909090;
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+
+div.OpcionNotas i {
+    font-size: 25px;
+    cursor: pointer;
+}
+
+div.OpcionNotas i:first-of-type {
+    color: rgb(26, 170, 26);
+}
+
+div.OpcionNotas i:last-of-type {
+    color: rgb(238, 59, 59);
+}

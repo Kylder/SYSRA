@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="icon" href="img/Icono.png">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>SYSRA</title>
+</head>
+
+<body>
+    <!-- CABECERA/MENU -->
+    <header>
+        <!-- FONDO LATERAL -->
+        <div class='header-barra'>
+            <div class="HeaderInfoUsuario">
+                <!-- <p >Bienvenido</p>
+                <p id="UserName">Usuario</p> -->
+            </div>
+        </div>
+
+        <!-- SECCION 1 -->
+        <div class="GestorNotas seccion1">
+            <h1>Sistema de Registro de Asociaciones</h1>
+               <div class="Opciones">
+                <ul>
+                    <li>
+                        <div class="Icono" id="ClickAgregarTarea">
+                            <p>+</p>
+                        </div>
+                        <p>Agregar Asociación</p>
+                    </li>
+         
+                    <li>
+                        <div class="Icono" id="ClickVerTarea">
+                            <i class="fas fa-angle-right"></i>
+                        </div>
+                        <p>Ver Asociación</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- CUADRO AGREGAR NOTAS -->
+            <div class="AgregaNota">
+                <h2>Nota</h2>
+
+                <form action="#" id="FormularioNotas">
+                    <input type="text" class="Inpt" placeholder="Fotocopia de DNI" id="Nota">
+                    <input type="file" name="dni" id="btn1"><br>
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <input type="text" class="Inpt" placeholder="" id="Nota"><br>
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <input type="text" class="Inpt" placeholder="" id="Nota">
+                    <!-- MENSAJE NOTA ENVIADA -->
+                    <div class="NotaEnviada">
+                        <p>Tu Asociacion ah sido Guardada!</p>
+                    </div>
+
+                    <!-- MENSAJE NOTA VACIA -->
+                    <div class="NotaError">
+                        <p>Tu registro está vacío!</p>
+                    </div>
+
+                    <div class="BtnAgregar">
+                        <input type="submit" value="Agregar">
+                    </div>
+                </form>
+            </div>
+
+            <!-- FONDO OSO -->
+            <div class="FondoOso">
+                <img src="img/panda.jpg" alt="">
+            </div>
+        </div>
+
+
+        <!-- SECCION 2 VER NOTAS -->
+        <div class="GestorNotas seccion2">
+            <h1>Gestor Asociaciones</h1>
+            <div class="Opciones">
+                <ul>
+                    <li>
+                        <div class="Icono" id="ClickVolverTarea">
+                            <i class="fas fa-angle-left"></i>
+                        </div>
+                        <p>Volver</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- CUADRO VER NOTAS -->
+            <div class="InfoText">
+                <p>Asociaciones</p>
+                <a href="#" id="Limpiar">Limpiar</a>
+            </div>
+            <!-- AGREGANDO CADA NOTA EN LI -->
+            <div class="TodasNotas" id="CuadroGuardarNotas"></div>
+            <!-- FONDO OSO -->
+            <div class="FondoOso2">
+                <img src="img/panda.jpg" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- SCRIPT -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
